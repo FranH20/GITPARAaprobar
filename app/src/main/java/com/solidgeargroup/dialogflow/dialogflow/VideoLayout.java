@@ -14,7 +14,7 @@ import androidx.cardview.widget.CardView;
 
 public class VideoLayout extends AppCompatActivity {
     VideoView videoView;
-    CardView card ;
+    CardView card;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +38,7 @@ public class VideoLayout extends AppCompatActivity {
         }
     }
 
-    void minimizar()
-    {
+    void minimizar() {
         videoView.setMediaController(null);
         pictureInPictureMode();
     }
@@ -48,7 +47,6 @@ public class VideoLayout extends AppCompatActivity {
     protected void onPostResume() {
         super.onPostResume();
         minimizar();
-
     }
 
 }

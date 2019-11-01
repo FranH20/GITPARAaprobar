@@ -98,6 +98,14 @@ public class MainActivity extends AppCompatActivity implements AIListener {
             }
         });
 
+        findViewById(R.id.video).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, VideoLayout.class);
+                startActivity(i);
+            }
+        });
+
 
     }
 
@@ -142,11 +150,6 @@ public class MainActivity extends AppCompatActivity implements AIListener {
 
     //INICIO VIDEO FLOTANTE
     ActionBar actionBar;
-    public void onclicverVideo(View view) {
-
-        Intent i = new Intent(this, VideoLayout.class);
-        startActivity(i);
-    }
     @Override
     public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode, Configuration newConfig) {
         if (isInPictureInPictureMode){
@@ -156,4 +159,8 @@ public class MainActivity extends AppCompatActivity implements AIListener {
         }
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
 }
