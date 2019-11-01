@@ -78,6 +78,16 @@
             android:src="@drawable/mic2"
             android:id="@+id/micButton"
             ></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onclicverVideo"
+            android:src="@drawable/video"
+            android:id="@+id/verVideo"
+            ></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
     </RelativeLayout>
 
 

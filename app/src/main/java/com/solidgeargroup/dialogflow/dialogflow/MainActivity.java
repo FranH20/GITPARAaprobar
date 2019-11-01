@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ActionBar;
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
@@ -136,4 +139,21 @@ public class MainActivity extends AppCompatActivity implements AIListener {
         super.onDestroy();
         android.os.Process.killProcess(android.os.Process.myPid());
     }
+
+    //INICIO VIDEO FLOTANTE
+    ActionBar actionBar;
+    public void onclicverVideo(View view) {
+
+        Intent i = new Intent(this, VideoLayout.class);
+        startActivity(i);
+    }
+    @Override
+    public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode, Configuration newConfig) {
+        if (isInPictureInPictureMode){
+            actionBar.hide();
+        }else {
+            actionBar.show();
+        }
+    }
+
 }
