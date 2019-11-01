@@ -157,8 +157,8 @@ public class MainActivity extends AppCompatActivity implements AIListener {
         super.onStop();
     }
 
-    public void VerVideo(View view) {
-        Intent i = new Intent(MainActivity.this, VideoLayout.class);
+    public void VerVideo(View v) {
+        Intent i = new Intent(this, VideoLayout.class);
         startActivity(i);
     }
 }
