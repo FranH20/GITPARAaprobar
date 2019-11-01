@@ -79,14 +79,11 @@
             android:id="@+id/micButton"
             ></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <Button
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/video"
             android:onClick="VerVideo"
-            android:id="@+id/verVideo"
-            ></com.google.android.material.floatingactionbutton.FloatingActionButton>
-
+            android:id="@+id/verVideo"></Button>
 
     </LinearLayout>
 
