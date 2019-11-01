@@ -9,18 +9,16 @@ import android.widget.MediaController;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 
 public class VideoLayout extends AppCompatActivity {
     VideoView videoView;
-    CardView card;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_layout);
         //video
-        videoView = (VideoView) findViewById(R.id.video);
+        videoView = findViewById(R.id.video);
         Uri path = Uri.parse("android.resource://com.solidgeargroup.dialogflow.dialogflow/"+ R.raw.yo);
         videoView.setMediaController(new MediaController(this));
         videoView.setVideoURI(path);
