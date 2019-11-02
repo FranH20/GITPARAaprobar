@@ -14,6 +14,7 @@ import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -27,6 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import ai.api.AIListener;
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements AIListener {
     AdaptadorFirebase miAdaptador;
     private TextToSpeech mTextToSpeech;
     private AIService mAIService;
+    ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,8 +101,6 @@ public class MainActivity extends AppCompatActivity implements AIListener {
             }
         });
 
-
-
     }
 
 
@@ -141,8 +142,7 @@ public class MainActivity extends AppCompatActivity implements AIListener {
         android.os.Process.killProcess(android.os.Process.myPid());
     }
 
-    //INICIO VIDEO FLOTANTE
-    ActionBar actionBar;
+
     @Override
     public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode, Configuration newConfig) {
         if (isInPictureInPictureMode){
@@ -161,4 +161,6 @@ public class MainActivity extends AppCompatActivity implements AIListener {
         Intent i = new Intent(this, VideoLayout.class);
         startActivity(i);
     }
+
+
 }
