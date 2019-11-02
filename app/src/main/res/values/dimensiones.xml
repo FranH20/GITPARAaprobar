@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mic">65dp</dimen>
+    <dimen name="mic2">135dp</dimen>
+    <dimen name="share">205dp</dimen>
+    <dimen name="phone">275dp</dimen>
+    <dimen name="whatsapp">345dp</dimen>
+    <dimen name="video">415dp</dimen>
+</resources>

@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -47,6 +48,16 @@ public class MainActivity extends AppCompatActivity implements AIListener {
     private TextToSpeech mTextToSpeech;
     private AIService mAIService;
     ActionBar actionBar;
+
+    boolean isMenuOpen = false;
+
+    FloatingActionButton multiple_actions;
+    FloatingActionButton mic;
+    FloatingActionButton mic2;
+    FloatingActionButton share;
+    FloatingActionButton phone;
+    FloatingActionButton whatsapp;
+    FloatingActionButton video;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +112,43 @@ public class MainActivity extends AppCompatActivity implements AIListener {
             }
         });
 
+        multiple_actions = findViewById(R.id.multiple_actions);
+        mic = findViewById(R.id.micButton);
+        mic2 = findViewById(R.id.micButton2);
+        share = findViewById(R.id.share);
+        phone = findViewById(R.id.phone);
+        whatsapp = findViewById(R.id.whastapp);
+        video = findViewById(R.id.verVideo);
+
+        multiple_actions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                menuOpen();
+            }
+        });
+
+    }
+
+    public void menuOpen(){
+        if (!isMenuOpen){
+            mic.animate().translationY(-getResources().getDimension(R.dimen.mic));
+            mic2.animate().translationY(-getResources().getDimension(R.dimen.mic2));
+            share.animate().translationY(-getResources().getDimension(R.dimen.share));
+            phone.animate().translationY(-getResources().getDimension(R.dimen.phone));
+            whatsapp.animate().translationY(-getResources().getDimension(R.dimen.whatsapp));
+            video.animate().translationY(-getResources().getDimension(R.dimen.video));
+
+            isMenuOpen = true;
+        }else{
+            mic.animate().translationY(0);
+            mic2.animate().translationY(0);
+            share.animate().translationY(0);
+            phone.animate().translationY(0);
+            whatsapp.animate().translationY(0);
+            video.animate().translationY(0);
+
+            isMenuOpen = false;
+        }
     }
 
 
