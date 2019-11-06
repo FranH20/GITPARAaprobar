@@ -48,7 +48,7 @@
 
         app:cardBackgroundColor="#ffffff"
         app:cardCornerRadius="10dp"
-        app:cardElevation="15dp">
+        app:cardElevation="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,10 +76,12 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        app:elevation="20dp"
+        app:elevation="2dp"
         app:pressedTranslationZ="12dp"
         android:src="@drawable/mic2"
         android:id="@+id/micButton"
+        android:backgroundTint="@color/bolita"
+        app:borderWidth="0dp"
     ></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -91,10 +93,12 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        app:elevation="20dp"
+        app:elevation="2dp"
         app:pressedTranslationZ="12dp"
         android:src="@drawable/silenciar_microfono"
         android:id="@+id/micButton2"
+        android:backgroundTint="@color/bolita"
+        app:borderWidth="0dp"
         ></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -106,10 +110,13 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        app:elevation="20dp"
+        app:elevation="2dp"
         app:pressedTranslationZ="12dp"
+        android:onClick="onclic_Share"
         android:src="@drawable/share"
         android:id="@+id/share"
+        android:backgroundTint="@color/bolita"
+        app:borderWidth="0dp"
         ></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -121,10 +128,13 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        app:elevation="20dp"
+        app:elevation="2dp"
         app:pressedTranslationZ="12dp"
         android:src="@drawable/phone"
         android:id="@+id/phone"
+        android:onClick="onclicPhone"
+        android:backgroundTint="@color/bolita"
+        app:borderWidth="0dp"
         ></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -136,10 +146,13 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        app:elevation="20dp"
+        app:elevation="2dp"
         app:pressedTranslationZ="12dp"
         android:src="@drawable/whastapp"
         android:id="@+id/whastapp"
+        android:onClick="onclicWhastapp"
+        android:backgroundTint="@color/bolita"
+        app:borderWidth="0dp"
         ></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -151,11 +164,13 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        app:elevation="20dp"
+        app:elevation="2dp"
         app:pressedTranslationZ="12dp"
         android:src="@drawable/video"
         android:onClick="VerVideo"
         android:id="@+id/verVideo"
+        android:backgroundTint="@color/bolita"
+        app:borderWidth="0dp"
         ></com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -167,9 +182,11 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        app:elevation="20dp"
+        app:elevation="2dp"
         app:pressedTranslationZ="12dp"
         android:id="@+id/multiple_actions"
         android:src="@drawable/baseline_add_white_18dp"
+        android:backgroundTint="@color/bolita"
+        app:borderWidth="0dp"
         ></com.google.android.material.floatingactionbutton.FloatingActionButton>
 </RelativeLayout>

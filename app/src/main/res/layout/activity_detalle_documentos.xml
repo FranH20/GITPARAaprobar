@@ -100,5 +100,73 @@
 
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#3f51b5 "
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="10dp"
+        >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <VideoView
+                android:id="@+id/videodetalle"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/my_recycler_view"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </LinearLayout>
+        
+    </androidx.cardview.widget.CardView>
+
+    <!--INICIO CARDVIEW CONTENEDOR -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#36B28A"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+
+        app:cardElevation="15dp"
+        app:cardCornerRadius="10dp"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/UNIVERSIDAD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Abrir FUT"
+                android:layout_margin="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:onClick="onclic_universidad"
+            />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+    <!--FIN CARDVIEW CONTENEDOR -->
+
+
 
 </LinearLayout>

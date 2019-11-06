@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">GpadFrontEnd</string>
+    <string-array name="facultad">
+        <item>FAING</item>
+        <item>FADE</item>
+        <item>FACSA</item>
+        <item>FACEM</item>
+        <item>FAEDCOH</item>
+        <item>FAU</item>
+    </string-array>
 </resources>
