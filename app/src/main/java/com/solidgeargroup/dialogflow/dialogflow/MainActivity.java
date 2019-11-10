@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements AIListener {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         documentos = new ArrayList<Documento>();
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Documento");
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Documento_gpad");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
